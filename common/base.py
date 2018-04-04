@@ -101,6 +101,8 @@ print("My name is %s and weight is %d kg!" % ('Zara', 21))
       %p	 用十六进制数格式化变量的地址
 '''
 
+
+
 #String內建函数
 '''
 string.capitalize()
@@ -281,3 +283,9 @@ string.isdecimal()
 
 isdecimal()方法检查字符串是否只包含十进制字符。这种方法只存在于unicode对象。
 '''
+
+bb = lambda x: x if(x>0) else 0
+print(bb(1))
+
+tti_min = lambda x,y: 1 if(min(x,y)==0) else min(x,y)
+print(tti_min(4,5))
