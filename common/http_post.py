@@ -22,3 +22,13 @@ except Exception(e):
 finally:
     if httpClient:
         httpClient.close()
+
+
+# Python 2.x:
+#
+# import urllib2
+# contents = urllib2.urlopen("http://example.com/foo/bar").read()
+# Python 3.x:
+#
+# import urllib.request
+# contents = urllib.request.urlopen("http://example.com/foo/bar").read()

@@ -241,7 +241,7 @@ string.rstrip()
 
 删除 string 字符串末尾的空格.
 
-string.split(str="", num=string.count(str))
+string.split(sep="", num=string.count(str))
 
 以 str 为分隔符切片 string，如果 num有指定值，则仅分隔 num 个子字符串
 
@@ -289,3 +289,9 @@ print(bb(1))
 
 tti_min = lambda x,y: 1 if(min(x,y)==0) else min(x,y)
 print(tti_min(4,5))
+
+fruits = ['banana', 'apple',  'mango']
+for fruit in fruits:
+    print('当前水果 :', fruit)
+for index in range(len(fruits)):
+    print('当前水果 :', fruits[index])

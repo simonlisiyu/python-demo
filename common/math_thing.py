@@ -1,12 +1,24 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
 
-# math 模块提供了许多对浮点数的数学运算函数。
+
+#math模块提供了许多对浮点数的数学运算函数。
 import math
 print(dir(math))
 
-# cmath 模块包含了一些用于复数运算的函数。
+#cmath 模块包含了一些用于复数运算的函数。
 #cmath 模块的函数跟 math 模块函数基本一致，区别是 cmath 模块运算的是复数，math 模块运算的是数学运算
 import cmath
 print(dir(cmath))
+
+# 指数
+print(2**3)
+# 整除
+print(22//8)
+# 取余
+print(33%3)
+
+print(round(2.2))
 
 '''
 数学函数

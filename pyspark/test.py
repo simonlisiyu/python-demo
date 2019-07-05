@@ -25,6 +25,18 @@ result = sqlContext.sql("select * from dwd_order_make_d_temp where city_id=12")
 
 result.rdd.map(lambda row:[str(c) for c in row]).saveAsTextFile("/user/its_bi/lisiyu/order")
 
+rdd = sc.parallelize([2, 3, 4])
+sorted(rdd.flatMap(lambda x: range(1, x)).collect())
+# [1, 1, 1, 2, 2, 3]
+sorted(rdd.flatMap(lambda x: [(x, x), (x, x)]).collect())
+# [(2, 2), (2, 2), (3, 3), (3, 3), (4, 4), (4, 4)]
+
+rdd_link = df_link_info.rdd.map(lambda row: {}).map(lambda rmap: rmap.values())
+df_link = sqlContext.createDataFrame(rdd_link,['extra_name', 'lane_num', 'negative_code', 'negative_direction', \
+                                               'negative_linkids', 'positive_code', 'positive_direction', \
+                                               'positive_linkids', 'road_length', 'road_name', 'serial_num']
+                                     ).repartition(1)
+
 # provinceid = result.first()['provinceid']
 
 # rdd_linkfreespeed = sc.textFile(file_linkfreeapeed).map(lambda line:line.split('\t')).map(lambda p:Row(linkid=p[0], freespeed=float(p[1])))

@@ -2,7 +2,10 @@
 # 1.map字典的方法
 map = {}
 map["k1"] = "v1"
-print(map)
+for kv in map.items():
+    print(kv[0])
+print(map.items())
+print(map['k1'])
 print(map.keys())     # 输出所有键
 print(map.values())    # 输出所有值
 del map["k1"]   # 删除键是'k1'的条目
@@ -38,11 +41,21 @@ array = ["222","333","444"]
 array.append("111")
 array[0] = "10"
 print(array)
+brr = array
+brr += array
+print(brr)
+print(array[:2])
 print(array[0])            # 输出列表的第一个元素
 print(array[-2])            # 输出列表的倒数第二个元素
 print(array[1:3])         # 输出第二个至第三个元素
 print(array[2:])           # 输出从第三个开始至列表末尾的所有元素
 print(array + array)           # 打印组合的列表
+
+# 使用切片来删除
+li = [1,2,3,4,5,6]
+li = li[:-2]
+print(li)
+
 '''
 1	list.append(obj)
 在列表末尾添加新的对象
@@ -84,7 +97,9 @@ print(x&y)  #交集 x.intersection(y)
 print(x|y)  #并集 x.union(y)
 print(x-y)  #差集 x.difference(y)
 print(x^y)  #对称差集（项在x或y中，但不会同时出现在二者中） x.symmetric_difference(y)
-x.add('f')
+x.add('f')            # 添加一项
+x.update([10,37,42])  # 添加多项
+print("xxx", x)
 x.remove('f')   #从 set “x”中删除元素 f, 如果不存在则引发 KeyError
 x.discard('f')  #如果在 set “x”中存在元素 f, 则删除
 len(x)
@@ -97,17 +112,25 @@ x.copy()    #返回 set “x”的一个浅复制
 # 5.其他的集合应用方法
 #去除海量列表里重复元素
 arr1 = [11,22,33,44,11,22]
-set = set(arr1)
-arr2 = [i for i in set]
+set1 = set(arr1)
+print(set1)
+arr2 = [i for i in set1]
 print(arr2)
 
 # 6.循环
-count = 0
-while count < 2:
-    print(count, " is  less than 2")
-    count = count + 1
-else:
-    print(count, " is not less than 2")
+# count = 0
+# while count < 2:
+#     print(count, " is  less than 2")
+#     count = count + 1
+# else:
+#     print(count, " is not less than 2")
+#
+# for index in range(len(array)):
+#     print('当前is :', array[index])
+#
+# for i in range(10):
+#     print(i)
+# # 倒叙
+# for i in range(10)[::-1]:
+#     print(i)
 
-for index in range(len(array)):
-    print('当前is :', array[index])
