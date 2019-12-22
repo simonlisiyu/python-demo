@@ -1,7 +1,8 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import time
+# opentsdb http client
+
 import requests
 import sys
 
@@ -13,7 +14,7 @@ def send_json(json, s):
     return r.text
 
 
-fileprefix = "/Users/didi/Documents/"
+fileprefix = "/Users/Documents/"
 s = requests.Session()
 
 for i in range(1, len(sys.argv)):

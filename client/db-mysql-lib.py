@@ -6,8 +6,8 @@ db.connect(
         'host': '100.90.164.31',
         'port': 3306,
         'user': 'root',
-        'passwd': 'Znjty@Didi@2017',
-        'database': 'its_trafficflow',
+        'passwd': '',
+        'database': '',
     })
 
 sql = "select nodeid1, nodeid2, level, next_linkids from link_%s where linkid=%s" % ('20170412', '343434')

@@ -13,7 +13,7 @@ def send_json(json, s):
     return r.text
 
 
-fileprefix = "/Users/didi/Documents/"
+fileprefix = "/Users/Documents/"
 s = requests.Session()
 
 for i in range(1, len(sys.argv)):

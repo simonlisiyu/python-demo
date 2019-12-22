@@ -16,7 +16,7 @@ sys.setdefaultencoding('utf8')
 # db_port = sys.argv[3]
 # db_user = sys.argv[4]
 # db_pwd = sys.argv[5]
-filename = "/Users/didi/Desktop/doc/2.部门文档/治堵平台/互联网警情/12_2018061212.txt"
+filename = "/Users/Desktop/doc/2.部门文档/治堵平台/互联网警情/12_2018061212.txt"
 db_ip = '10.95.96.91'
 db_user = 'root'
 db_pwd = 'root'
